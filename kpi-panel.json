@@ -3,6 +3,7 @@
   "name": "KPI Cards Panel",
   "version": "1.0.0",
   "description": "Multi-KPI cards panel widget",
+  "newInstancePrefix": "kpi-panel",
   "vendor": "autodeck.com",
   "eula": "autodeck.com",
   "license": "MIT",
@@ -59,4 +60,5 @@
       "description": "Triggered when a KPI card is clicked"
     }
   }
+
 }

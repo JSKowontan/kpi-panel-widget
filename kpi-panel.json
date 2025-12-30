@@ -1,0 +1,62 @@
+{
+  "id": "com.autodeck.custom.kpi.panel",
+  "name": "KPI Cards Panel",
+  "version": "1.0.0",
+  "description": "Multi-KPI cards panel widget",
+  "vendor": "autodeck.com",
+  "eula": "autodeck.com",
+  "license": "MIT",
+  "icon": "",
+  "imports": [
+    "datasource",
+    "planning-model"
+  ],
+  "webcomponents": [
+    {
+      "kind": "main",
+      "tag": "kpi-panel-widget",
+      "url": "kpi-panel-bundle.js",
+      "integrity": "sha256-ktFK6yyuoWseI6WW9NS9B9hREX6kSLKy8YFnyLvPryw=",
+      "ignoreIntegrity": false
+    },
+    {
+      "kind": "builder",
+      "tag": "kpi-panel-builder",
+      "url": "kpi-panel-bundle.js",
+      "integrity": "sha256-ktFK6yyuoWseI6WW9NS9B9hREX6kSLKy8YFnyLvPryw=",
+      "ignoreIntegrity": false
+    }
+  ],
+  "properties": {
+    "kpiData": {
+      "type": "string",
+      "description": "JSON Data for the KPIs",
+      "default": "[{\"title\":\"Revenue\",\"value\":30.3,\"unit\":\"Bln\",\"status\":\"error\",\"budget\":31.9,\"budgetPct\":94.9,\"py\":23.7,\"pyChange\":6.6,\"pyPct\":28.0,\"trend\":[10,12,15,13,18,20,18,22,25,24,28,30,29,32,30]},{\"title\":\"COGS\",\"value\":17.2,\"unit\":\"Bln\",\"status\":\"success\",\"budget\":18.9,\"budgetPct\":91.0,\"py\":14.6,\"pyChange\":2.6,\"pyPct\":17.7,\"trend\":[15,15,16,14,14,15,16,16,17,17,18,17,17,17,17]},{\"title\":\"Gross Profit\",\"value\":13.1,\"unit\":\"Bln\",\"status\":\"success\",\"budget\":13.0,\"budgetPct\":100.5,\"py\":9.0,\"pyChange\":4.0,\"pyPct\":44.8,\"trend\":[5,6,7,8,7,8,9,8,10,11,10,12,13,12,13]},{\"title\":\"OPEX\",\"value\":8.6,\"unit\":\"Bln\",\"status\":\"success\",\"budget\":11.9,\"budgetPct\":72.1,\"py\":6.5,\"pyChange\":2.1,\"pyPct\":32.1,\"trend\":[8,8,9,8,8,9,8,8,8,9,8,8,9,8,8]},{\"title\":\"Operating Profit\",\"value\":4.8,\"unit\":\"Bln\",\"status\":\"success\",\"budget\":4.2,\"budgetPct\":113.5,\"py\":2.8,\"pyChange\":1.9,\"pyPct\":68.0,\"trend\":[2,3,2,3,4,3,4,5,4,5,4,5,4,5,4]},{\"title\":\"Net Profit\",\"value\":3.6,\"unit\":\"Bln\",\"status\":\"success\",\"budget\":3.0,\"budgetPct\":119.7,\"py\":2.6,\"pyChange\":0.9,\"pyPct\":35.1,\"trend\":[2,2,3,2,3,2,3,3,3,4,3,4,3,4,3]}]"
+    },
+    "width": {
+      "type": "integer",
+      "default": 1000
+    },
+    "height": {
+      "type": "integer",
+      "default": 180
+    }
+  },
+  "methods": {
+    "setKPIData": {
+      "description": "Sets the KPI data via script",
+      "parameters": [
+        {
+          "name": "RecordsArray",
+          "type": "Selection[]",
+          "description": "JSON String of data"
+        }
+      ]
+    }
+  },
+  "events": {
+    "onCardClick": {
+      "description": "Triggered when a KPI card is clicked"
+    }
+  }
+}

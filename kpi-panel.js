@@ -238,13 +238,13 @@
             }
         }
 
-        connectedCallback() {
+        //connectedCallback() {
             // Render default if empty
-            if(!this._props.kpiData || this._props.kpiData.length === 0) {
+            //if(!this._props.kpiData || this._props.kpiData.length === 0) {
                  // For testing/preview purposes if no data is passed
                  // In production, you might want to leave this empty
-            }
-        }
+            //}
+        //}
 
         render() {
             const container = this.shadowRoot.getElementById("container");
@@ -361,5 +361,6 @@
     // =================================================================================
     customElements.define("kpi-panel-widget", KPIPanelWidget);
     customElements.define("kpi-panel-builder", KPIPanelBuilder);
+
 
 })();
